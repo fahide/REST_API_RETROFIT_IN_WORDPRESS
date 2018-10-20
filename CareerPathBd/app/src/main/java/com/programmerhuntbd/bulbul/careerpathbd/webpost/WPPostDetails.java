@@ -29,7 +29,8 @@ public class WPPostDetails extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.main_app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Career Path Bd Web");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Post Details");
 
         webView = (WebView) findViewById(R.id.postwebview);
         Intent i = getIntent();
@@ -44,7 +45,7 @@ public class WPPostDetails extends AppCompatActivity {
 //        // to open webview inside app -- otherwise It will open url in device browser
 //        webView.setWebViewClient(new WebViewClient());
 
-        String  url = MainActivity.mListPost.get(position).getLink();
+        String  url = WebMain.mListPost.get(position).getLink();
 
         final ProgressDialog pd = ProgressDialog.show(WPPostDetails.this, "", "Please wait, your website is being processed...", true);
 

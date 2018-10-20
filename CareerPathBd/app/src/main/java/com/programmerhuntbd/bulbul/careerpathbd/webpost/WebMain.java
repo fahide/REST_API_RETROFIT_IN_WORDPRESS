@@ -29,8 +29,6 @@ public class WebMain extends AppCompatActivity {
     private ArrayList<Model> list;
     private RecyclerViewAdapter adapter;
 
-//    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//    setSupportActionBar(toolbar);
 
     private String baseURL = "http://careerpathbd.com";
     ///wp-json/wp/v2/posts
@@ -41,6 +39,12 @@ public class WebMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.main_app_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Post List");
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
 

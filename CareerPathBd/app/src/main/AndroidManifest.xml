@@ -21,9 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".webpost.WebMain" />
+        <activity android:name=".webpost.WebMain"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".webpost.WPPostDetails"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".webpost.WebMain"></activity>
     </application>
 
 </manifest>
